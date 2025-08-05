@@ -17,12 +17,7 @@
 
 ## 🏆 Concurrents en Israël
 
-- **eKnower** : Sessions en ligne en direct avec des experts ; forte orientation sur les cours synchrones et l’apprentissage interactif.  
-- **Spires** : Place de marché de tuteurs professionnels proposant des sessions enregistrées, une facturation intégrée et des profils de tuteurs.  
-- **Preply** : Plateforme mondiale de tutorat linguistique et académique, avec des milliers de tuteurs et des outils de planification.  
-- **HeyTutor** : Moteur de mise en relation intelligent reliant étudiants et tuteurs selon les préférences et la proximité.  
-- **Helen Doron** : Franchise éducative établie offrant des ressources et des applications d’apprentissage des langues.
-
+----------------------add--------------
 ---
 
 ## 🌟 Pourquoi Morim se démarque
