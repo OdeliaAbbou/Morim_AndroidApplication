@@ -47,10 +47,11 @@ Unified Role Experience: A single app for both students and teachers—no need t
 
 
 
-🔍 Key Code Highlights
+## 🔍 Key Code Highlights
 
-1. ViewModel Injection & LiveData
+### ViewModel Injection & LiveData
 
+```java
 @HiltViewModel
 public class MainViewModel extends ViewModel {
     @Inject
@@ -66,7 +67,7 @@ Illustrates dependency injection via Hilt, separating UI from data layers. fi
 
 2. Geolocation & Map Camera Recentring
 
-ScheduledExecutorService executor = ...;  
+ScheduledExecutorService executor = ...;
 executor.scheduleAtFixedRate(() -> {
     if (googleMap != null) {
         googleMap.animateCamera(CameraUpdateFactory.newLatLng(currentLocation));
@@ -113,6 +114,7 @@ com.example.morim
 ├─ dto/ # Data transfer objects (forms)
 ├─ util/ # Utilities (DateUtils, SimpleLocation wrapper)
 └─ MorimApp.java # @HiltAndroidApp entry point
+```java
 
 
 🎓 Getting Started
