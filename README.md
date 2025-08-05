@@ -16,17 +16,20 @@ Morim is an innovative native Android application (Java) connecting students and
 
 
 🏆 Competitors in Israel
-
+-
+-
 
 
 🌟 Why Morim Stands Out
 
-Local-Focused Map Integration: Visual discovery of Israeli teachers by neighborhood, supporting spontaneous in-person lessons.
+- Local-Focused Map Integration: Visual discovery of Israeli teachers by neighborhood, supporting spontaneous in-person lessons.
 
-Offline-First Chat: Robust messaging powered by Room + Firestore sync ensures conversations persist and remain accessible without constant network connectivity.
+- Offline-First Chat: Robust messaging powered by Room + Firestore sync ensures conversations persist and remain accessible without constant network connectivity.
 Unified Role Experience: A single app for both students and teachers—no need to switch platforms to book mentorship or conduct classes.
 
-Open-Source Android Excellence: Transparent, production-ready codebase showcasing modern Android best practices.
+- Open-Source Android Excellence: Transparent, production-ready codebase showcasing modern Android best practices.
+
+
 
 🛠️ Architecture & Technology Stack
 
@@ -42,6 +45,8 @@ Open-Source Android Excellence: Transparent, production-ready codebase showcasin
 
 - JUnit, Mockito, and Espresso for unit and instrumentation testing within a CI pipeline.
 
+
+
 🔍 Key Code Highlights
 
 1. ViewModel Injection & LiveData
@@ -55,8 +60,9 @@ public class MainViewModel extends ViewModel {
     }
     // Additional business logic methods...
 }
-
 Illustrates dependency injection via Hilt, separating UI from data layers. fileciteturn0file0
+
+
 
 2. Geolocation & Map Camera Recentring
 
@@ -69,6 +75,8 @@ executor.scheduleAtFixedRate(() -> {
 
 Keeps the map centered on the student’s location every 20 seconds, enhancing user experience. fileciteturn0file0
 
+
+
 3. Offline-First Chat Synchronization
 
 firestore.collection("chats").document(chatId)
@@ -80,6 +88,8 @@ firestore.collection("chats").document(chatId)
 
 Listens for real-time updates, persisting messages locally to guarantee offline access. fileciteturn0file0
 
+
+
 4. Comprehensive Scheduling Flow
 
 new ScheduleMeetingDialog(...)
@@ -88,6 +98,8 @@ new ScheduleMeetingDialog(...)
     });
 
 Unified UI component for booking lessons, supporting both in-person and video modes.
+
+
 
 📂 Project Structure Overview
 
