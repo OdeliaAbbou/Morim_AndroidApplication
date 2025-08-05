@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="deploymentTargetDropDown">
+    <value>
+      <entry key="AllInstrumentedTests">
+        <State />
+      </entry>
+      <entry key="AuthActivityUIIntegrationTest">
+        <State />
+      </entry>
+      <entry key="RegisterTest">
+        <State />
+      </entry>
+      <entry key="ScheduleMeetingTest">
+        <State />
+      </entry>
+      <entry key="app">
+        <State>
+          <targetSelectedWithDropDown>
+            <Target>
+              <type value="QUICK_BOOT_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="VIRTUAL_DEVICE_PATH" />
+                  <value value="C:\Users\odeli\.android\avd\Pixel_7_API_34.avd" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </targetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2025-05-25T19:52:15.731896300Z" />
+        </State>
+      </entry>
+      <entry key="testValidLogin_withRealFirebaseUser()">
+        <State />
+      </entry>
+    </value>
+  </component>
+</project>

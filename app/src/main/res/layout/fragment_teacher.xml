@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Title Centered -->
+    <TextView
+        android:id="@+id/titleTeacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Teacher"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/backBtn"
+        app:layout_constraintStart_toEndOf="@id/backBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Separator -->
+    <View
+        android:id="@+id/sep"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/backBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Contenu principal -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/sep"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Photo et infos principales -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivTeacherItem"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_ic"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
+
+            <TextView
+                android:id="@+id/tvTeacherItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Name name"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+
+            <RatingBar
+                android:id="@+id/rbTeacherItem"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="3"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:stepSize="1.0"
+                android:layout_marginTop="4dp" />
+
+            <!-- Prix -->
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6dp"
+                android:text="@string/hourly_fee_150"
+                android:textColor="#3F51B5"
+                android:textStyle="bold" />
+
+            <!-- Section Teaching Subjects -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teaching Subjects"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/tvTeacherItemSubjects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Subjects list here"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Section Education -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Education"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:id="@+id/tvTeacherItemEducation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Education details here"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Section Contact Info -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact Info"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp"/>
+
+            <!-- Phone -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/tvTeacherPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="050-000-0000"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="2dp"/>
+
+            <!-- Email -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/tvTeacherEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="email@email.com"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="2dp"/>
+
+            <!-- Address -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/tvTeacherAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="123 Main Street, City"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="2dp"/>
+
+            <!-- Boutons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:layoutDirection="rtl"
+                android:paddingHorizontal="8dp"
+                android:layout_marginTop="12dp">
+
+                <ImageButton
+                    android:id="@+id/btnFavorite"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_favorite"
+                    app:tint="@color/black" />
+
+                <ImageButton
+                    android:id="@+id/btnCommentsList"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/star" />
+
+                <ImageButton
+                    android:id="@+id/btnChat"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/chat"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:tint="@color/black" />
+
+                <Button
+                    android:id="@+id/btnSchedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:paddingHorizontal="20dp"
+                    android:text="Schedule"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAddReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/greenp"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="12dp"
+                android:text="Add Review"
+                android:visibility="invisible"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:elevation="4dp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
