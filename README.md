@@ -55,7 +55,7 @@ public class MainViewModel extends ViewModel {
     }
     // Additional business logic methods...
 }
-Illustrates dependency injection via Hilt, separating UI from data layers. fileciteturn0file0
+Illustrates dependency injection via Hilt, separating UI from data layers.
 
 
 
