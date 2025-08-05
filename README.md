@@ -1,55 +1,53 @@
-Morim
+# Morim
 
-Morim is an innovative native Android application (Java) connecting students and teachers for both in-person and remote lessons. It offers a comprehensive platform for scheduling, messaging, ratings, and discovery—all within a clean, maintainable architecture.
+**Morim** est une application Android native innovante (Java) mettant en relation étudiants et enseignants pour des cours en présentiel et à distance. Elle offre une plateforme complète pour la planification, la messagerie, les évaluations et la découverte, le tout dans une architecture propre et maintenable.
 
-🚀 Unique Value Proposition
+---
 
-- Geolocation-Driven Discovery: Interactive map displaying teachers’ locations with custom profile markers for quick, visual discovery.
+## 🚀 Proposition de valeur unique
 
-- Dual-Role Scheduling: Teachers can not only teach but also upskill by booking other teachers as mentors or co-instructors.
+- **Découverte géolocalisée** : Carte interactive affichant la position des enseignants avec des marqueurs personnalisés pour une identification visuelle rapide.  
+- **Planification à double rôle** : Les enseignants peuvent non seulement donner des cours, mais aussi se former en réservant d’autres enseignants comme mentors ou co-instructeurs.  
+- **Chat hors ligne prioritaire** : Messagerie robuste reposant sur Room et synchronisation Firestore, garantissant la persistance des conversations même sans connexion.  
+- **Planification hors ligne prioritaire** : Les leçons programmées sont mises en cache localement via Room et synchronisées avec Firestore, assurant la continuité sans réseau.  
+- **Architecture MVVM & DI transparente** : Architecture claire avec Hilt et LiveData, séparant la logique d’interface de la logique métier pour simplifier les tests et la maintenance.  
+- **Améliorations UI/UX adaptatives** : Fonctionnalités comme le recentrage programmé de la caméra et les badges de statut dynamiques (Annulé/Terminé/À venir) améliorent l’expérience utilisateur.
 
-- Offline-First Chat: Robust messaging powered by Room + Firestore sync ensures conversations persist and remain accessible without constant network connectivity.
+---
 
-- Seamless MVVM & DI: Clean architecture using Hilt and LiveData keeps UI logic separated from business logic, simplifying testing and maintenance.
+## 🏆 Concurrents en Israël
 
-- Adaptive UI/UX Enhancements: Features like scheduled camera recentering and dynamic status badges (Canceled/Completed/Upcoming) improve usability and provide clear feedback.
+- **eKnower** : Sessions en ligne en direct avec des experts ; forte orientation sur les cours synchrones et l’apprentissage interactif.  
+- **Spires** : Place de marché de tuteurs professionnels proposant des sessions enregistrées, une facturation intégrée et des profils de tuteurs.  
+- **Preply** : Plateforme mondiale de tutorat linguistique et académique, avec des milliers de tuteurs et des outils de planification.  
+- **HeyTutor** : Moteur de mise en relation intelligent reliant étudiants et tuteurs selon les préférences et la proximité.  
+- **Helen Doron** : Franchise éducative établie offrant des ressources et des applications d’apprentissage des langues.
 
+---
 
-🏆 Competitors in Israel
--
--
+## 🌟 Pourquoi Morim se démarque
 
+1. **Intégration cartographique locale** : Découverte visuelle des enseignants israéliens par quartier pour faciliter les cours en présentiel spontanés.  
+2. **Expérience hors ligne résiliente** : Les fonctionnalités essentielles telles que le chat (snippet 3) et la planification (snippet 4) fonctionnent de façon fluide hors ligne et se synchronisent automatiquement dès que la connexion revient.  
+3. **Expérience de rôle unifiée** : Une seule application pour étudiants et enseignants — plus besoin de basculer entre plusieurs plateformes pour réserver ou dispenser un cours.  
+4. **Excellence open-source Android** : Code transparent et prêt pour la production, démontrant les meilleures pratiques Android modernes.
 
-🌟 Why Morim Stands Out
+---
 
-- Local-Focused Map Integration: Visual discovery of Israeli teachers by neighborhood, supporting spontaneous in-person lessons.
+## 🛠️ Architecture & Stack technologique
 
-- Offline-First Chat: Robust messaging powered by Room + Firestore sync ensures conversations persist and remain accessible without constant network connectivity.
-Unified Role Experience: A single app for both students and teachers—no need to switch platforms to book mentorship or conduct classes.
+- **Android (Java)** avec architecture **MVVM** et injection de dépendances **Hilt**.  
+- **Firebase Auth** pour l’authentification sécurisée ; **Firestore** et **Firebase Storage** pour la persistance des données et des médias.  
+- **Room** comme base locale pour la mise en cache et la persistance hors ligne, synchronisée avec Firestore.  
+- **Picasso** pour le chargement efficace des images et la création de marqueurs de carte personnalisés.  
+- **ScheduledExecutorService** pour les tâches périodiques (ex. recentrage de la caméra).  
+- **JUnit**, **Mockito** et **Espresso** pour les tests unitaires et d’instrumentation dans un pipeline CI.
 
-- Open-Source Android Excellence: Transparent, production-ready codebase showcasing modern Android best practices.
-
-
-
-🛠️ Architecture & Technology Stack
-
-- Android (Java) with MVVM architecture and Hilt dependency injection.
-
-- Firebase Auth for secure authentication; Firestore & Firebase Storage for data persistence and media.
-
-- Room local database for offline caching and persistence, synchronized with Firestore.
-
-- Picasso for efficient image loading and custom map marker creation.
-
-- ScheduledExecutorService for periodic tasks (e.g., camera recentering).
-
-- JUnit, Mockito, and Espresso for unit and instrumentation testing within a CI pipeline.
-
-
+---
 
 ## 🔍 Key Code Highlights
 
-### ViewModel Injection & LiveData
+1. ViewModel Injection & LiveData
 
 ```java
 @HiltViewModel
