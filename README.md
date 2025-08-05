@@ -3,6 +3,23 @@
 **Morim** is an innovative native Android application (Java) connecting students and teachers for lessons. It offers a comprehensive platform for scheduling, messaging, ratings, and discovery—within a clean, maintainable architecture.
 
 ---
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/adf49b0c-0899-4a00-a168-1e80c0d714c6" width="200" alt="capture 1" />
+    
+  <img src="https://github.com/user-attachments/assets/b790ca3f-02c0-4d02-958a-929351acfcdf" width="200" alt="capture 2" />
+  
+  <img src="https://github.com/user-attachments/assets/dd936f50-7515-4783-847b-3d7f4530e7e9" width="200" alt="capture 3" />
+  
+  <img src="https://github.com/user-attachments/assets/c952353e-7a9d-4c4d-ab73-021a637d3e15" width="200" alt="capture 4" />
+  
+  <img src="https://github.com/user-attachments/assets/bee5756c-7f3f-4e24-97cc-af3e9b853acb" width="200" alt="capture 5" />
+  
+  <img src="https://github.com/user-attachments/assets/95a7218b-3654-4c60-a463-74b47442c3dc" width="200" alt="capture 6" />
+  
+  <img src="https://github.com/user-attachments/assets/cee3be21-9abd-4e88-8247-9d4c38648fcd" width="200" alt="capture 7" />
+</p>
+
+---
 
 ## 🚀 Unique Value Proposition
 
