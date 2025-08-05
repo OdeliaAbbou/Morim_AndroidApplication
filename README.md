@@ -1,6 +1,6 @@
 # Morim
 
-**Morim** is an innovative native Android application (Java) connecting students and teachers for both in-person and remote lessons. It offers a comprehensive platform for scheduling, messaging, ratings, and discovery—within a clean, maintainable architecture.
+**Morim** is an innovative native Android application (Java) connecting students and teachers for lessons. It offers a comprehensive platform for scheduling, messaging, ratings, and discovery—within a clean, maintainable architecture.
 
 ---
 
@@ -17,12 +17,7 @@
 
 ## 🏆 Competitors in Israel
 
-- **eKnower**: Live online sessions with experts; strong focus on synchronous courses and interactive learning.  
-- **Spires**: Marketplace of professional tutors offering recorded sessions, integrated billing, and tutor profiles.  
-- **Preply**: Global tutoring platform for language and academic subjects, with thousands of tutors and scheduling tools.  
-- **HeyTutor**: Intelligent matching engine connecting students and tutors based on preferences and proximity.  
-- **Helen Doron**: Established educational franchise offering resources and language learning apps.
-
+0000000000000000000000
 ---
 
 ## 🌟 Why Morim Stands Out
@@ -97,7 +92,7 @@ new ScheduleMeetingDialog(...)
         meetingsManager.schedule(new Meeting(...));
     });
 
-Unified UI component for booking lessons, supporting both in-person and video modes.
+Unified UI component for booking lessons.
 
 
 
