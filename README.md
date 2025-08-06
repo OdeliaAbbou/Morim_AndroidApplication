@@ -190,7 +190,7 @@ executor.scheduleAtFixedRate(() -> {
 }, 20, 20, TimeUnit.SECONDS);
 ```
 
-Keeps the map centered on the student’s location every 20 seconds, enhancing user experience. fileciteturn0file0
+Keeps the map centered on the student’s location every 20 seconds, enhancing user experience. 
 
 
 
