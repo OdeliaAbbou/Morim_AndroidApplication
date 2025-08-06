@@ -42,9 +42,11 @@
 
 ## 🏆 Competitors in Israel
 
-- LimoudNaim
+- LimoudNaim 
+Israel’s largest private-tutor board offering free tutor profiles and lessons; lacks a native Android app, interactive map discovery and offline booking.  
 
 - Lessons
+Instant web-based tutor search with advanced filters and student reviews; no native mobile app, no built-in scheduling UI, and no offline-first capability.
 
 ---
 
