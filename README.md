@@ -91,17 +91,9 @@ Enable Google Places API and Play Integrity App Check in the Google Cloud Consol
 - **ScheduledExecutorService** for periodic tasks (e.g., camera recentering).  
 - **JUnit**, **Mockito**, and **Espresso** for unit and instrumentation testing in a CI pipeline.
 
-  ```java
-[ UI (Activities/Fragments) ] 
-         ↓ ViewModel 
-     [ Repository ] 
-    ↙               ↘  
-[ Room ]         [ Firestore ] 
-```
-
 ---
 
-📂 Project Structure Overview
+## 📂 Project Structure Overview
 ```java
 com.example.morim
 ├─ ui/ # Fragments & Activities
@@ -118,7 +110,10 @@ com.example.morim
 
 ---
 
-🗄️ Local Database (Room)
+
+
+
+## 🗄️ Local Database (Room)
 
 Entities
 
@@ -134,8 +129,7 @@ Entities
 
 
 
-
-🔩 Dependency Injection (Hilt) Modules
+## 🔩 Dependency Injection (Hilt) Modules
 
 - UserModule: provides UserDao, FirebaseUserManager
 
@@ -163,7 +157,7 @@ Entities
 
 ## 🔍 Key Code Highlights
 
-1. ViewModel Injection & LiveData
+## 1. ViewModel Injection & LiveData
 
 ```java
 @HiltViewModel
@@ -180,7 +174,7 @@ Illustrates dependency injection via Hilt, separating UI from data layers.
 
 
 
-2. Geolocation & Map Camera Recentring
+## 2. Geolocation & Map Camera Recentring
 
 ```java
 
@@ -196,7 +190,7 @@ Keeps the map centered on the student’s location every 20 seconds, enhancing u
 
 
 
-3. Offline-First Chat Synchronization
+## 3. Offline-First Chat Synchronization
 
 ```java
 firestore.collection("chats").document(chatId)
@@ -211,7 +205,7 @@ Listens for real-time updates, persisting messages locally to guarantee offline 
 
 
 
-4. Comprehensive Scheduling Flow
+## 4. Comprehensive Scheduling Flow
 
 ```java
 new ScheduleMeetingDialog(...)
@@ -223,7 +217,7 @@ Unified UI component for booking lessons.
 
 
 
-🎓 Getting Started
+## 🎓 Getting Started
 
 - Clone the repository and open in Android Studio.
 
