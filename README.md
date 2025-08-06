@@ -3,9 +3,23 @@
 **Morim** is an innovative native Android application (Java) connecting students and teachers for lessons. It offers a comprehensive platform for scheduling, messaging, ratings, and discovery—within a clean, maintainable architecture.
 
 ---
+
+## 🚀 Features & Unique Value Proposition
+
+- 🔍 **Search** teachers by subject, location & price  
+- 📍 **Geolocation-Driven Discovery**: interactive map with custom markers for quick identification  
+- 📅 **Scheduling & Dual-Role Booking**: plan in-person or virtual lessons; teachers can also book peers as mentors/co-instructors  
+- 💬 **Offline-First Chat**: robust messaging using Room + Firestore sync for seamless, always-on communication  
+- ⏳ **Offline-First Scheduling**: scheduled lessons cached locally with automatic Firestore synchronization  
+- ⚙️ **Transparent MVVM & DI**: clean separation of UI & business logic via Hilt & LiveData  
+- 🎨 **Adaptive UI/UX Enhancements**: automatic map recentering, dynamic status badges (Canceled / Completed / Upcoming)  
+- ⭐ **Ratings & Reviews**: user feedback on teacher profiles  
+- 🔔 **Push Notifications**: built-in reminders for upcoming lessons  
+- 📁 **Media Upload**: share exercise files, PDFs, images  
+
+---
 <p align="center">
   <img src="https://github.com/user-attachments/assets/adf49b0c-0899-4a00-a168-1e80c0d714c6" width="200" alt="screenshot 1" />
-  
   
   <img src="https://github.com/user-attachments/assets/b790ca3f-02c0-4d02-958a-929351acfcdf" width="200" alt="screenshot 2" />
   
@@ -17,29 +31,19 @@
   
   <img src="https://github.com/user-attachments/assets/a9139d2f-e54c-4737-957b-88b2ef79162f" width="200" alt="screenshot 8" />
 
-  
   <img src="https://github.com/user-attachments/assets/95a7218b-3654-4c60-a463-74b47442c3dc" width="200" alt="screenshot 6" />
   
   <img src="https://github.com/user-attachments/assets/cee3be21-9abd-4e88-8247-9d4c38648fcd" width="200" alt="screenshot 7" />
   
 </p>
 
----
-
-## 🚀 Unique Value Proposition
-
-- **Geolocation-Driven Discovery**: Interactive map showing teachers’ locations with custom markers for quick visual identification.  
-- **Dual-Role Scheduling**: Teachers can not only teach but also upskill by booking other teachers as mentors or co-instructors.  
-- **Offline-First Chat**: Robust messaging using Room with Firestore synchronization, ensuring conversations persist even without connectivity.  
-- **Offline-First Scheduling**: Scheduled lessons are cached locally via Room and synchronized with Firestore, ensuring continuity without a network.  
-- **Transparent MVVM & DI**: Clear architecture with Hilt and LiveData, separating UI logic from business logic to simplify testing and maintenance.  
-- **Adaptive UI/UX Enhancements**: Features like scheduled camera recentering and dynamic status badges (Canceled/Completed/Upcoming) enhance user experience.
 
 ---
 
 ## 🏆 Competitors in Israel
 
 0000000000000000000000
+
 ---
 
 ## 🌟 Why Morim Stands Out
@@ -48,6 +52,31 @@
 2. **Resilient Offline Experience**: Core features like chat (snippet 3) and scheduling (snippet 4) work seamlessly offline and automatically synchronize when connectivity returns.  
 3. **Unified Role Experience**: One app for both students and teachers—no need to switch platforms to book or teach lessons.  
 4. **Open-Source Android Excellence**: Transparent, production-ready codebase demonstrating modern Android best practices.
+
+
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/OdeliaAbbou/Morim_AndroidApplication.git
+cd Morim_AndroidApplication
+
+- Open the project in Android Studio Arctic Fox or higher.
+
+- Make sure you have Java 11, minSdkVersion 21, targetSdkVersion 33.
+
+---
+
+## 🔧 Configuration
+
+- Place your `google-services.json` in the `app/` folder.
+- Create a `secret.properties` file at the project root:
+  ```properties
+  GOOGLE_PLACES_API_KEY=<YOUR_PLACES_KEY>
+  FIREBASE_APP_CHECK_SECRET=<YOUR_APPCHECK_SECRET>
+Enable Google Places API and Play Integrity App Check in the Google Cloud Console.
 
 ---
 
@@ -60,8 +89,70 @@
 - **ScheduledExecutorService** for periodic tasks (e.g., camera recentering).  
 - **JUnit**, **Mockito**, and **Espresso** for unit and instrumentation testing in a CI pipeline.
 
+[ UI (Activities/Fragments) ] 
+         ↓ ViewModel 
+     [ Repository ] 
+    ↙               ↘  
+[ Room ]         [ Firestore ]
+
 
 ---
+
+📂 Project Structure Overview
+
+com.example.morim
+├─ ui/ # Fragments & Activities
+│ ├─ auth/ # Registration, Login
+│ └─ main/ # Map, favorites, My Meetings
+├─ viewmodel/ # ViewModels exposing LiveData
+├─ model/ # Domain models & data persistence (Room, Firestore)
+├─ database/ # Firebase managers, Room DAOs
+├─ dto/ # Data transfer objects (forms)
+├─ util/ # Utilities (DateUtils, SimpleLocation wrapper)
+└─ MorimApp.java # @HiltAndroidApp entry point
+```java
+
+
+---
+
+🗄️ Local Database (Room)
+
+Entities
+
+- ChatEntity (id, senderId, message, timestamp)
+
+- MeetingEntity (id, teacherId, studentId, date, mode, status)
+
+- DAOs (in database/local)
+
+- ChatDao: insert, delete, chronological queries
+
+- MeetingDao: CRUD operations on scheduled lessons
+
+
+🔩 Dependency Injection (Hilt) Modules
+
+- UserModule: provides UserDao, FirebaseUserManager
+
+- MeetingModule: provides MeetingDao, FirebaseMeetingsManager
+
+- FavoritesModule: injects the favorites repository
+
+- MorimModule: configures Google Places & App Check
+
+
+🎨 Custom Components & Utilities
+
+- NACalendarView & TeacherCalendar: custom calendar views for slot selection
+
+- SubjectSpinner: dynamic subject dropdown loaded from MorimApp.getSubjects()
+
+- NotificationHelper: manages notification channels and reminders
+
+- ScreenUtils: prevents screenshots and screen recordings
+
+- DecimalDigitsInputFilter: enforces numeric input formats
+
 
 ## 🔍 Key Code Highlights
 
@@ -116,21 +207,6 @@ new ScheduleMeetingDialog(...)
 
 Unified UI component for booking lessons.
 
-
-
-📂 Project Structure Overview
-
-com.example.morim
-├─ ui/ # Fragments & Activities
-│ ├─ auth/ # Registration, Login
-│ └─ main/ # Map, favorites, My Meetings
-├─ viewmodel/ # ViewModels exposing LiveData
-├─ model/ # Domain models & data persistence (Room, Firestore)
-├─ database/ # Firebase managers, Room DAOs
-├─ dto/ # Data transfer objects (forms)
-├─ util/ # Utilities (DateUtils, SimpleLocation wrapper)
-└─ MorimApp.java # @HiltAndroidApp entry point
-```java
 
 
 🎓 Getting Started
