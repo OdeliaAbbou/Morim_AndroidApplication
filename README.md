@@ -205,7 +205,7 @@ firestore.collection("chats").document(chatId)
     });
 ```
 
-Listens for real-time updates, persisting messages locally to guarantee offline access. fileciteturn0file0
+Listens for real-time updates, persisting messages locally to guarantee offline access.
 
 
 
