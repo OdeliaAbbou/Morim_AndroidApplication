@@ -42,7 +42,9 @@
 
 ## 🏆 Competitors in Israel
 
-0000000000000000000000
+- LimoudNaim
+
+- Lessons
 
 ---
 
