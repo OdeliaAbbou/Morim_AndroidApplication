@@ -115,7 +115,7 @@ com.example.morim
 
 ## 🗄️ Local Database (Room)
 
-Entities
+- Entities
 
 - ChatEntity (id, senderId, message, timestamp)
 
