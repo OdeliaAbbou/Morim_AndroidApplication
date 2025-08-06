@@ -142,7 +142,7 @@ Entities
 
 
 
-🎨 Custom Components & Utilities
+## 🎨 Custom Components & Utilities
 
 - NACalendarView & TeacherCalendar: custom calendar views for slot selection
 
