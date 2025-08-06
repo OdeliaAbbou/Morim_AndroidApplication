@@ -62,6 +62,7 @@
 ```bash
 git clone https://github.com/OdeliaAbbou/Morim_AndroidApplication.git
 cd Morim_AndroidApplication
+```
 
 - Open the project in Android Studio Arctic Fox or higher.
 
@@ -76,6 +77,7 @@ cd Morim_AndroidApplication
   ```properties
   GOOGLE_PLACES_API_KEY=<YOUR_PLACES_KEY>
   FIREBASE_APP_CHECK_SECRET=<YOUR_APPCHECK_SECRET>
+  ```
 Enable Google Places API and Play Integrity App Check in the Google Cloud Console.
 
 ---
@@ -99,7 +101,7 @@ Enable Google Places API and Play Integrity App Check in the Google Cloud Consol
 ---
 
 📂 Project Structure Overview
-
+```java
 com.example.morim
 ├─ ui/ # Fragments & Activities
 │ ├─ auth/ # Registration, Login
@@ -110,7 +112,7 @@ com.example.morim
 ├─ dto/ # Data transfer objects (forms)
 ├─ util/ # Utilities (DateUtils, SimpleLocation wrapper)
 └─ MorimApp.java # @HiltAndroidApp entry point
-```java
+```
 
 
 ---
@@ -168,18 +170,21 @@ public class MainViewModel extends ViewModel {
     }
     // Additional business logic methods...
 }
+```
 Illustrates dependency injection via Hilt, separating UI from data layers.
 
 
 
 2. Geolocation & Map Camera Recentring
 
+```java
+
 ScheduledExecutorService executor = ...;
 executor.scheduleAtFixedRate(() -> {
     if (googleMap != null) {
         googleMap.animateCamera(CameraUpdateFactory.newLatLng(currentLocation));
     }
-}, 20, 20, TimeUnit.SECONDS);
+}, 20, 20, TimeUnit.SECONDS);```
 
 Keeps the map centered on the student’s location every 20 seconds, enhancing user experience. fileciteturn0file0
 
@@ -187,12 +192,13 @@ Keeps the map centered on the student’s location every 20 seconds, enhancing u
 
 3. Offline-First Chat Synchronization
 
+```java
 firestore.collection("chats").document(chatId)
     .addSnapshotListener((snapshot, error) -> {
         if (snapshot != null && snapshot.exists()) {
             chatDao.insert(convertToChat(snapshot));
         }
-    });
+    });```
 
 Listens for real-time updates, persisting messages locally to guarantee offline access. fileciteturn0file0
 
@@ -200,11 +206,12 @@ Listens for real-time updates, persisting messages locally to guarantee offline 
 
 4. Comprehensive Scheduling Flow
 
+```java
 new ScheduleMeetingDialog(...)
     .setOnConfirm((date, subject, mode) -> {
         meetingsManager.schedule(new Meeting(...));
     });
-
+```
 Unified UI component for booking lessons.
 
 
