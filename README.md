@@ -91,12 +91,13 @@ Enable Google Places API and Play Integrity App Check in the Google Cloud Consol
 - **ScheduledExecutorService** for periodic tasks (e.g., camera recentering).  
 - **JUnit**, **Mockito**, and **Espresso** for unit and instrumentation testing in a CI pipeline.
 
+  ```java
 [ UI (Activities/Fragments) ] 
          ↓ ViewModel 
      [ Repository ] 
     ↙               ↘  
-[ Room ]         [ Firestore ]
-
+[ Room ]         [ Firestore ] 
+```
 
 ---
 
@@ -132,6 +133,8 @@ Entities
 - MeetingDao: CRUD operations on scheduled lessons
 
 
+
+
 🔩 Dependency Injection (Hilt) Modules
 
 - UserModule: provides UserDao, FirebaseUserManager
@@ -141,6 +144,8 @@ Entities
 - FavoritesModule: injects the favorites repository
 
 - MorimModule: configures Google Places & App Check
+
+
 
 
 🎨 Custom Components & Utilities
@@ -184,7 +189,8 @@ executor.scheduleAtFixedRate(() -> {
     if (googleMap != null) {
         googleMap.animateCamera(CameraUpdateFactory.newLatLng(currentLocation));
     }
-}, 20, 20, TimeUnit.SECONDS);```
+}, 20, 20, TimeUnit.SECONDS);
+```
 
 Keeps the map centered on the student’s location every 20 seconds, enhancing user experience. fileciteturn0file0
 
@@ -198,7 +204,8 @@ firestore.collection("chats").document(chatId)
         if (snapshot != null && snapshot.exists()) {
             chatDao.insert(convertToChat(snapshot));
         }
-    });```
+    });
+```
 
 Listens for real-time updates, persisting messages locally to guarantee offline access. fileciteturn0file0
 
