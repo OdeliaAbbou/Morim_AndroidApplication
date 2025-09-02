@@ -63,7 +63,8 @@ Instant web-based tutor search with advanced filters and student reviews; no nat
 ## 🌟 Why Morim Stands Out
 
 1. **Local-Focused Map Integration**: Visual discovery of Israeli teachers by neighborhood to facilitate spontaneous in-person lessons.  
-2. **Resilient Offline Experience**: Core features like chat  and scheduling work seamlessly offline.  
+2. **Resilient Offline Experience**: Users can still browse their teachers, favorites, chats, and scheduled meetings without internet.  
+Room caches previously loaded data locally.  
 3. **Unified Role Experience**: One app for both students and teachers—no need to switch platforms to book or teach lessons.  
 4. **Open-Source Android Excellence**: Transparent, production-ready codebase demonstrating modern Android best practices.
 
