@@ -7,11 +7,17 @@
 ## 🚀 Features & Unique Value Proposition
 
 -🔍 Teacher Discovery: Search teachers by subject, location & price
+
 -👥 Dual-Role Support: Teachers can also act as students to learn from other teachers
+
 -📅 Meeting Scheduling: Book lessons with custom calendar component for date selection
+
 -💬 Chat System: Real-time messaging between students and teachers
+
 -⭐ Rating & Reviews: Students can rate teachers after completed lessons
+
 -❤️ Favorites: Save preferred teachers for quick access
+
 -📱 Offline Support: Core data cached locally for offline viewing
 
 
