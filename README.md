@@ -63,7 +63,7 @@ Instant web-based tutor search with advanced filters and student reviews; no nat
 ## 🌟 Why Morim Stands Out
 
 1. **Local-Focused Map Integration**: Visual discovery of Israeli teachers by neighborhood to facilitate spontaneous in-person lessons.  
-2. **Resilient Offline Experience**: Users can still browse their teachers, favorites, chats, and scheduled meetings without internet.  
+2. **Offline Viewing Support**: Users can still browse their teachers, favorites, chats, and scheduled meetings without internet.  
 Room caches previously loaded data locally.  
 3. **Unified Role Experience**: One app for both students and teachers—no need to switch platforms to book or teach lessons.  
 4. **Open-Source Android Excellence**: Transparent, production-ready codebase demonstrating modern Android best practices.
@@ -101,7 +101,7 @@ Enable Google Places API and Play Integrity App Check in the Google Cloud Consol
 
 - **Android (Java)** with **MVVM** architecture and **Hilt** dependency injection.  
 - **Firebase Auth** for secure authentication; **Firestore** & **Firebase Storage** for data persistence and media.  
-- **Room** local database for offline caching and persistence, synchronized with Firestore.
+- **Room** local database used as a read-only cache: users can view previously loaded teachers, favorites, chats, and meetings offline.
 - **Location & Maps**  Google Places API (+ Maps Utils) 📍  
 - **Picasso** for efficient image loading and custom map marker creation.  
 - **ScheduledExecutorService** for periodic tasks (e.g., camera recentering).  
