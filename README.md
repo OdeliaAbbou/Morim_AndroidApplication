@@ -123,7 +123,7 @@ com.example.morim
 
 ## 🗄️ Local Database (Room)
 
-- Entities: **ChatEntity**,**MessageEntity**, **MeetingEntity**, **TeacherEntity**, **UserEntity**, **FavoriteEntity**, **LocationEntity**, **CommentEntity**.
+- Entities: **ChatEntity**, **MessageEntity**, **MeetingEntity**, **TeacherEntity**, **UserEntity**, **FavoriteEntity**, **LocationEntity**, **CommentEntity**.
 - DAOs (in `database/local`): **ChatDao**, **MeetingDao**, **TeacherDao**, **StudentDao**, **UserDao**, **FavoritesDao**,
 
 
